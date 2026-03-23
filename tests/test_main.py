@@ -6,3 +6,10 @@ def test1():
 
     nr_csms: int = count_csms("data/csms.txt")
     assert nr_csms == 826
+
+
+def test2():
+    from main import main
+
+    status: int = main(["data/csms.txt"])
+    assert status == 0
