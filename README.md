@@ -8,14 +8,14 @@ A template repository for python scripts and projects using [pyXLMS](https://git
 
 ## Checklist
 
-- [] Use [uv](https://docs.astral.sh/uv/) for python project and dependency management.
-- [] Write your code in `main.py` or any other python file.
-- [] \[Optionally\] setup tests in `tests/`.
-- [] Replace data in `data` with your own data \[or delete if you don't have data\].
-- [] Setup your `CITATION.cff` according to your needs \[or delete file\].
-- [] Replace copyright name in `LICENSE` and/or choose a different license.
-- [] Add your requirements to `requirements.txt`.
-- [] Adjust this `README.md` to your needs!
+- [ ] Use [uv](https://docs.astral.sh/uv/) for python project and dependency management.
+- [ ] Write your code in `main.py` or any other python file.
+- [ ] \[Optionally\] setup tests in `tests/`.
+- [ ] Replace data in `data` with your own data \[or delete if you don't have data\].
+- [ ] Setup your `CITATION.cff` according to your needs \[or delete file\].
+- [ ] Replace copyright name in `LICENSE` and/or choose a different license.
+- [ ] Add your requirements to `requirements.txt`.
+- [ ] Adjust this `README.md` to your needs!
 
 ## Getting Help
 
