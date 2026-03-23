@@ -3,143 +3,58 @@
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#   "pandas",
+#   "pyxlms",
 # ]
 # ///
 
-# SCRIPT NAME
-# 2024 (c) Micha Johannes Birklbauer
-# https://github.com/michabirklbauer/
-# micha.birklbauer@gmail.com
-
-
-##### REQUIREMENTS ######
-
-# pip install pandas
-
-#########################
-
-# import packages
 import argparse
-# import pandas as pd
+import pyXLMS
 
 ######## VERSION ########
 
 # version tracking
 __version = "1.0.0"
-__date = "2024-03-11"
-
-###### PARAMETERS #######
-
-param_1 = 1
-param_2 = 2
-
-#########################
-
-docs = """
-DESCRIPTION:
-A description of the script [multiplies two integers].
-USAGE:
-main.py [-f1 --factor1]
-        [-f2 --factor2]
-required arguments:
-    -f1 int, --factor1 int
-        First factor of multiplication.
-optional arguments:
-    -f2 int, --factor2
-        Second factor of multiplication.
-        Default: 2
-    -h, --help
-        Show this help message and exit.
-    --version
-        Show program's version number and exit.
-"""
+__date = "2026-03-23"
 
 ####### FUNCTIONS #######
 
-# these examples use the numpy docstring style
-# https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard
 
-
-def my_product(x: int, y: int) -> int:
-    """Returns the product of two integer numbers.
+def count_csms(file: str) -> int:
+    """Returns the number of CSMs in an MS Annika result file.
 
     Parameters
     ----------
-    x : int
-        The first factor.
-    y : int, default = 2
-        The second factor.
+    x : str
+        Name/Path of the MS Annika result file.
 
     Returns
     -------
-    product : int
-        The product of x and y.
-
-    Examples
-    --------
-    >>> from main import my_product
-    >>> product = my_product(1, 2)
-    >>> product
-    2
+    count : int
+        The number of CSMs in the result file.
     """
-
-    return x * y
+    pr = pyXLMS.parser.read(file, crosslinker="DSS", engine="MS Annika")
+    return len(pr["crosslink-spectrum-matches"])
 
 
 ##### MAIN FUNCTION #####
 
 
 def main(argv=None) -> int:
-    """Main function.
-
-    Parameters
-    ----------
-    argv : list, default = None
-        Arguments passed to argparse.
-
-    Returns
-    -------
-    product : int
-        The product of given arguments.
-
-    Examples
-    --------
-    >>> from main import main
-    >>> product = main(["-f1", "1", "-f2", "2"])
-    >>> product
-    2
-    >>> product = main(["-f1", "3"])
-    >>> product
-    6
-    """
-
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "-f1",
-        "--factor1",
-        dest="f1",
-        required=True,
-        help="First factor of multiplication.",
-        type=int,
-    )
-    parser.add_argument(
-        "-f2",
-        "--factor2",
-        dest="f2",
-        default=2,
-        help="Second factor of multiplication.",
-        type=int,
+        dest="csms",
+        help="Name/Path of the MS Annika result file.",
+        type=str,
     )
     args = parser.parse_args(argv)
 
-    p = my_product(args.f1, args.f2)
-    print(f"The product of {args.f1} * {args.f2} = {p}")
+    nr_csms = count_csms(args.csms)
+    print(f"Read {nr_csms} CSMs from file {args.csms}!")
 
-    return p
+    return 0
 
 
 ######## SCRIPT #########
 
 if __name__ == "__main__":
-    m = main()
+    exit(main())
