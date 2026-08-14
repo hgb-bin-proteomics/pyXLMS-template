@@ -1,6 +1,6 @@
 ![Ruff](https://github.com/hgb-bin-proteomics/pyXLMS-template/workflows/Ruff%20Linting%20and%20Formatting/badge.svg)
-![Pyright](https://github.com/hgb-bin-proteomics/pyXLMS-template/workflows/Type-checking%20with%20Pyright/badge.svg)
-![Flake8AndPytest](https://github.com/hgb-bin-proteomics/pyXLMS-template/workflows/Flake8%20and%20pytest/badge.svg)
+![Ty](https://github.com/hgb-bin-proteomics/pyXLMS-template/workflows/Type-checking%20with%20ty/badge.svg)
+![Pytest](https://github.com/hgb-bin-proteomics/pyXLMS-template/workflows/Testing8%20with%20pytest/badge.svg)
 
 # Template Repository for pyXLMS projects
 
@@ -23,7 +23,7 @@ A template repository for python scripts and projects using [pyXLMS](https://git
 - Help for this template:
   - [uv](https://docs.astral.sh/uv/): Python project and dependency management.
   - [ruff](https://astral.sh/ruff): Python linter and formatter.
-  - [pyright](https://github.com/microsoft/pyright): Python type checker.
+  - [ty](https://docs.astral.sh/ty/): Python type checker.
   - [pytest](https://docs.pytest.org/en/stable/): Python testing suit.
   - [GitHub Actions](https://docs.github.com/en/actions): Used for running the above automatically.
   - You may also want to check out [this](https://github.com/michabirklbauer/python_template) template which was used as a basis.
