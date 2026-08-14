@@ -1,13 +1,14 @@
-name: Type-checking with Pyright
+name: Type-checking with ty
 
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
-  pyright:
+  ty:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v5
@@ -22,7 +23,7 @@ jobs:
     - name: Setup uv
       run: |
         uv python pin 3.14
-        uv add pyright
-    - name: Type-check with Pyright
+        uv add ty
+    - name: Type-check with ty
       run: |
-        uv run pyright --warnings
+        uv run ty check --config-file ty.toml
