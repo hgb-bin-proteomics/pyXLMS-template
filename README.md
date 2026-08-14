@@ -1,6 +1,6 @@
 ![Ruff](https://github.com/hgb-bin-proteomics/pyXLMS-template/workflows/Ruff%20Linting%20and%20Formatting/badge.svg)
 ![Ty](https://github.com/hgb-bin-proteomics/pyXLMS-template/workflows/Type-checking%20with%20ty/badge.svg)
-![Pytest](https://github.com/hgb-bin-proteomics/pyXLMS-template/workflows/Testing8%20with%20pytest/badge.svg)
+![Pytest](https://github.com/hgb-bin-proteomics/pyXLMS-template/workflows/Testing%20with%20pytest/badge.svg)
 
 # Template Repository for pyXLMS projects
 
