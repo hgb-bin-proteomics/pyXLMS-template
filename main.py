@@ -49,7 +49,7 @@ def count_csms(file: str) -> int:
 ##### MAIN FUNCTION #####
 
 
-def main(argv=None) -> int:
+def main(argv: list[str] | None = None) -> int:
     r"""Main function.
 
     Parameters
