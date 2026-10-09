@@ -7,6 +7,16 @@
 # ]
 # ///
 
+r"""
+usage: main.py [-h] csms
+
+positional arguments:
+  csms        Name/Path of the MS Annika result file.
+
+options:
+  -h, --help  show this help message and exit
+"""
+
 import argparse
 import pyXLMS
 
@@ -57,4 +67,4 @@ def main(argv=None) -> int:
 ######## SCRIPT #########
 
 if __name__ == "__main__":
-    exit(main())
+    raise SystemExit(main())
