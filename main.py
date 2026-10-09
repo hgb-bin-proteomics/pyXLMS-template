@@ -3,7 +3,7 @@
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#   "pyxlms",
+#   "pyxlms>=2.0.0",
 # ]
 # ///
 
