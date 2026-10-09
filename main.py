@@ -3,9 +3,20 @@
 # /// script
 # requires-python = ">=3.12"
 # dependencies = [
-#   "pyxlms",
+#   "pyxlms>=2.0.0",
 # ]
 # ///
+# PLEASE BE AWARE THAT SCRIPT METADATA WILL OVERRIDE THE PYPROJECT.TOML AND UV.LOCK
+
+r"""
+usage: main.py [-h] csms
+
+positional arguments:
+  csms        Name/Path of the MS Annika result file.
+
+options:
+  -h, --help  show this help message and exit
+"""
 
 import argparse
 import pyXLMS
@@ -13,14 +24,14 @@ import pyXLMS
 ######## VERSION ########
 
 # version tracking
-__version = "1.0.0"
-__date = "2026-03-23"
+__version = "1.0.1"
+__date = "2026-10-09"
 
 ####### FUNCTIONS #######
 
 
 def count_csms(file: str) -> int:
-    """Returns the number of CSMs in an MS Annika result file.
+    r"""Returns the number of CSMs in an MS Annika result file.
 
     Parameters
     ----------
@@ -39,7 +50,19 @@ def count_csms(file: str) -> int:
 ##### MAIN FUNCTION #####
 
 
-def main(argv=None) -> int:
+def main(argv: list[str] | None = None) -> int:
+    r"""Main function.
+
+    Parameters
+    ----------
+    argv : list or str, or None, default = None
+        Arguments passed to argparse.
+
+    Returns
+    -------
+    int
+        Exit status (zero is success).
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument(
         dest="csms",
@@ -57,4 +80,4 @@ def main(argv=None) -> int:
 ######## SCRIPT #########
 
 if __name__ == "__main__":
-    exit(main())
+    raise SystemExit(main())
