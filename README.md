@@ -6,12 +6,6 @@
 
 A template repository for python scripts and projects using [pyXLMS](https://github.com/hgb-bin-proteomics/pyXLMS).
 
-> [!IMPORTANT]
->
-> We don't automatically bump pyXLMS versions anymore, please run `uv lock --upgrade`
-> or `uv lock --upgrade-package pyxlms` after cloning the template to make sure you
-> are running the latest pyXLMS version!
-
 ## Checklist
 
 - [ ] Use [uv](https://docs.astral.sh/uv/) for python project and dependency management.
@@ -20,6 +14,13 @@ A template repository for python scripts and projects using [pyXLMS](https://git
 - [ ] Replace data in `data` with your own data \[or delete if you don't have data\].
 - [ ] Adjust the `LICENSE` and/or choose a different license.
 - [ ] Adjust this `README.md` to your needs!
+
+**We don't automatically bump pyXLMS versions anymore, please either run:**
+
+- `uv lock --upgrade`
+- or `uv lock --upgrade-package pyxlms`
+
+**...after cloning the template to make sure you are running the latest pyXLMS version!**
 
 ## Getting Help
 
