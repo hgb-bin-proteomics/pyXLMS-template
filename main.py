@@ -50,6 +50,18 @@ def count_csms(file: str) -> int:
 
 
 def main(argv=None) -> int:
+    r"""Main function.
+
+    Parameters
+    ----------
+    argv : list or str, or None, default = None
+        Arguments passed to argparse.
+
+    Returns
+    -------
+    int
+        Exit status (zero is success).
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument(
         dest="csms",
