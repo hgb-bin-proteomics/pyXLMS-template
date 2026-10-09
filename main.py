@@ -30,7 +30,7 @@ __date = "2026-03-23"
 
 
 def count_csms(file: str) -> int:
-    """Returns the number of CSMs in an MS Annika result file.
+    r"""Returns the number of CSMs in an MS Annika result file.
 
     Parameters
     ----------
