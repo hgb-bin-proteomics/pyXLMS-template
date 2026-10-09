@@ -15,7 +15,7 @@ A template repository for python scripts and projects using [pyXLMS](https://git
 - [ ] Adjust the `LICENSE` and/or choose a different license.
 - [ ] Adjust this `README.md` to your needs!
 
-**We don't automatically bump pyXLMS versions anymore, please either run:**
+**We don't automatically bump minor pyXLMS versions anymore, please either run:**
 
 - `uv lock --upgrade`
 - _or_ `uv lock --upgrade-package pyxlms`
