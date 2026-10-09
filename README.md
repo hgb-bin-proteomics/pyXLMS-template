@@ -18,7 +18,7 @@ A template repository for python scripts and projects using [pyXLMS](https://git
 **We don't automatically bump pyXLMS versions anymore, please either run:**
 
 - `uv lock --upgrade`
-- or `uv lock --upgrade-package pyxlms`
+- _or_ `uv lock --upgrade-package pyxlms`
 
 **...after cloning the template to make sure you are running the latest pyXLMS version!**
 
