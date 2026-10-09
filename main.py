@@ -23,8 +23,8 @@ import pyXLMS
 ######## VERSION ########
 
 # version tracking
-__version = "1.0.0"
-__date = "2026-03-23"
+__version = "1.0.1"
+__date = "2026-10-09"
 
 ####### FUNCTIONS #######
 
