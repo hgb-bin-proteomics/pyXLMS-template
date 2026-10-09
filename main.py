@@ -6,6 +6,7 @@
 #   "pyxlms>=2.0.0",
 # ]
 # ///
+# PLEASE BE AWARE THAT SCRIPT METADATA WILL OVERRIDE THE PYPROJECT.TOML AND UV.LOCK
 
 r"""
 usage: main.py [-h] csms
